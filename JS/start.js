@@ -12,12 +12,21 @@ function test(){
 	
 	var docWidth = $(document).width();
 	var docCenter = (docWidth/2);
-	var titleWidth = $("#test").width();
-	var centerThis = (titleWidth/2)
+	var titleWidth = docWidth - ($("#test").width());
+	var half = (titleWidth/2);
+	var correctNum = (docCenter-half);
+	
+	// document.write(docWidth + " ");
+	// document.write(docCenter + " ");
+	// document.write(titleWidth + " ");
+	// document.write(half + " ");
+	// document.write(correctNum + " ");
 	
 	$("#test").css("position","absolute");
-	$("#test").css("left", (docCenter-centerThis)+"px");
 	$("#test").css("fontSize","300%");
+//	$("#test").css("left", (docCenter - ($("#test").width()/2) ) + "px");
+	$("#test").css("left", correctNum+"px");
+	
 	
 	var startBtn = $('<input type="button" value="Start Game" id="start">');
 	$("body").append(startBtn);
