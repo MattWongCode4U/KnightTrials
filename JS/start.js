@@ -12,8 +12,11 @@ function test(){
 	
 	var docWidth = $(document).width();
 	var docCenter = (docWidth/2);
+	var titleWidth = $("#test").width();
+	var centerThis = (titleWidth/2)
+	
 	$("#test").css("position","absolute");
-	$("#test").css("left", docCenter+"px");
+	$("#test").css("left", (docCenter-centerThis)+"px");
 	$("#test").css("fontSize","300%");
 	
 	var startBtn = $('<input type="button" value="Start Game" id="start">');
