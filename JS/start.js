@@ -4,22 +4,16 @@ function startGame(){
 
 function test(){
 	var t = document.createElement("p");
-	var node1 = document.createTextNode("Hello Saar");
+	var node1 = document.createTextNode("Knight Trials");
 	t.appendChild(node1);
 	t.setAttribute("id","test");
 	t.setAttribute("class","getRidOf");
 	document.body.appendChild(t);
 	
-	var t = document.createElement("p");
-	var node1 = document.createTextNode("ure mum");
-	t.appendChild(node1);
-	t.setAttribute("id","urmum");
-	t.setAttribute("class","getRidOf");
-	document.body.appendChild(t);
-	
-	$("#test").css("position","absolute");
-	$("#test").css("left","500px");
-	$("#test").css("top","80px");
+	var docWidth = $(document).width();
+	var docCenter = $(docWidth/2);
+	$("#test").css("position","middle");
+	$("#test").css("left", "docCenterpx");
 	$("#test").css("fontSize","300%");
 	
 	var startBtn = $('<input type="button" value="Start Game" id="start">');
