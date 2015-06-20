@@ -36,4 +36,18 @@ function test(){
 	$("#del").click(function() {
 		$(".getRidOf").remove();
 	});
+	
+	var deleteAll = $('<input type="button" value="delete all" id="deleteIt">');
+	$("body").append(deleteAll)
+	
+	$("#deleteIt").click(function()
+	{
+		$(".getRidOf").remove();
+		$("#urmum").remove();
+		$("#start").remove();
+		$("#del").remove();
+		$("#deleteIt").remove();
+		
+	});
+
 }
