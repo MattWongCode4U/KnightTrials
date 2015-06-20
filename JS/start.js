@@ -7,6 +7,14 @@ function test(){
 	var node1 = document.createTextNode("Hello Saar");
 	t.appendChild(node1);
 	t.setAttribute("id","test");
+	t.setAttribute("class","getRidOf");
+	document.body.appendChild(t);
+	
+	var t = document.createElement("p");
+	var node1 = document.createTextNode("ure mum");
+	t.appendChild(node1);
+	t.setAttribute("id","urmum");
+	t.setAttribute("class","getRidOf");
 	document.body.appendChild(t);
 	
 	$("#test").css("position","absolute");
@@ -20,5 +28,12 @@ function test(){
 	$("#start").click(function() {
 		$("#start").remove();
 		$("p").remove();
+	});
+	
+	var deleteBtn = $('<input type="button" value="Delete text" id="del">');
+	$("body").append(deleteBtn);
+	
+	$("#del").click(function() {
+		$(".getRidOf").remove();
 	});
 }
